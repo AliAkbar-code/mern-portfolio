@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <main className="home-container">
       <div className="home-content">
-        <h1 className="home-title">Hi, I'm <span>Ali Akbar</span></h1>
+        <h1 className="home-title">
+          Hi, I'm <span>Ali Akbar</span>
+        </h1>
         <h2 className="home-subtitle">Full Stack MERN Developer</h2>
         <p className="home-description">
           I specialize in building scalable and modern web applications using
@@ -19,9 +21,11 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Optional Profile Image / Hero Illustration */}
       <div className="home-image">
-        <img src="../photo/WhatsApp Image 2025-09-11 at 19.05.18_90764fcd.jpg" alt="profile" />
+        <img
+          src="/images/WhatsApp Image 2025-09-11 at 19.05.18_90764fcd.jpg"
+          alt="Ali Akbar Profile"
+        />
       </div>
     </main>
   );
