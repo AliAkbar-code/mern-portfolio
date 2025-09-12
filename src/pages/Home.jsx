@@ -1,25 +1,30 @@
-import React from 'react';
+import React from "react";
+import "../style/Home.css";
 
 const Home = () => {
   return (
-    <main style={styles.container}>
-      <h1>Welcome to My Portfolio</h1>
-      <p>
-        I am a passionate Full Stack MERN developer specializing in building
-        scalable web applications.
-      </p>
-      <p>Explore my projects and skills through the navigation above.</p>
+    <main className="home-container">
+      <div className="home-content">
+        <h1 className="home-title">Hi, I'm <span>Ali Akbar</span></h1>
+        <h2 className="home-subtitle">Full Stack MERN Developer</h2>
+        <p className="home-description">
+          I specialize in building scalable and modern web applications using
+          MongoDB, Express, React, and Node.js. Explore my projects and skills
+          to see what I can create.
+        </p>
+
+        <div className="home-buttons">
+          <a href="/projects" className="btn primary">View Projects</a>
+          <a href="/contact" className="btn secondary">Contact Me</a>
+        </div>
+      </div>
+
+      {/* Optional Profile Image / Hero Illustration */}
+      <div className="home-image">
+        <img src="../photo/WhatsApp Image 2025-09-11 at 19.05.18_90764fcd.jpg" alt="profile" />
+      </div>
     </main>
   );
-};
-
-const styles = {
-  container: {
-    padding: '3rem 2rem',
-    maxWidth: '800px',
-    margin: '0 auto',
-    minHeight: '80vh',
-  },
 };
 
 export default Home;
