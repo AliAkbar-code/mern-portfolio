@@ -6,7 +6,7 @@ const Home = () => {
     <main className="home-container">
       <div className="home-content">
         <h1 className="home-title">
-          Hi, I'm <span>Ali Akbar</span>
+          Hi, I'm <span>Ali Akbar Subhani</span>
         </h1>
         <h2 className="home-subtitle">Full Stack MERN Developer</h2>
         <p className="home-description">
