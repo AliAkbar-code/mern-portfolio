@@ -1,73 +1,67 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { FaLinkedin, FaWhatsapp, FaBriefcase } from "react-icons/fa";
 import "../style/contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Contact form data:", formData);
-    setSubmitted(true);
-  };
+  // Animate on scroll (once)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <main className="contact-container">
-      <h1 className="contact-title">Get in Touch</h1>
+    <main
+      ref={sectionRef}
+      className={`contact-container animate-once ${isVisible ? "visible" : ""}`}
+    >
+      <h1 className="contact-title">Let’s Connect</h1>
       <p className="contact-subtitle">
-        Have a question or want to work together? Fill out the form below.
+        Reach out to me directly through these platforms:
       </p>
 
-      {submitted ? (
-        <p className="thankyou-msg">
-          ✅ Thank you for reaching out! I'll get back to you soon.
-        </p>
-      ) : (
-        <form onSubmit={handleSubmit} className="contact-form">
-          <label>
-            Name
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Your name"
-            />
-          </label>
+      <div className="contact-links">
+        <a
+          href="https://www.linkedin.com/in/your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-card"
+        >
+          <FaLinkedin className="contact-icon linkedin" />
+          <span>LinkedIn</span>
+        </a>
 
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="your@email.com"
-            />
-          </label>
+        <a
+          href="https://profile.indeed.com/p/your-profile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-card"
+        >
+          <FaBriefcase className="contact-icon indeed" />
+          <span>Indeed</span>
+        </a>
 
-          <label>
-            Message
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="Write your message..."
-            />
-          </label>
-
-          <button type="submit" className="btn-submit">
-            Send Message
-          </button>
-        </form>
-      )}
+        <a
+          href="https://wa.me/923xxxxxxxxx?text=Hello!%20I%20found%20your%20portfolio."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-card"
+        >
+          <FaWhatsapp className="contact-icon whatsapp" />
+          <span>WhatsApp Business</span>
+        </a>
+      </div>
     </main>
   );
 };

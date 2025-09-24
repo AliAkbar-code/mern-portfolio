@@ -49,9 +49,9 @@ const About = () => {
 
 const styles = {
   container: {
-    padding: '3rem 2rem',
+    padding: '1rem 1rem',
     maxWidth: '900px',
-    margin: '0 auto',
+    margin: '-45px auto',
     minHeight: '80vh',
     lineHeight: '1.7',
   },

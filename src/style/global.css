@@ -1,0 +1,78 @@
+/* Reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global body styles */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden; /* 🚫 Prevent horizontal scroll */
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+button, .btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Primary button */
+.btn.primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #0056b3;
+}
+
+/* Secondary button */
+.btn.secondary {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.btn.secondary:hover {
+  background: #ddd;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent navbar overlap */
+.main-content {
+  padding-top: 80px; /* adjust based on your navbar height */
+}

@@ -4,7 +4,7 @@ const projects = [
   {
     name: 'HealthMark',
     description: 'A livestock healthcare management system built with the MERN stack, designed to streamline animal healthcare and market processes.',
-    link: 'https://github.com/yourusername/healthmark', // Replace with your actual repo link
+    link: 'https://github.com/AliAkbar-code/-Livestock-health-care-HealthMark', // Replace with your actual repo link
   },
   {
     name: 'Blog Website',
@@ -41,9 +41,10 @@ const Projects = () => {
 
 const styles = {
   container: {
-    padding: '3rem 2rem',
+    padding:'10px 10px',
+    // margin:'10px 10px',
     maxWidth: '1000px',
-    margin: '0 auto',
+    margin: '10px auto',
     minHeight: '80vh',
     textAlign: 'center',
   },
