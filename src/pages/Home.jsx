@@ -91,14 +91,14 @@ const Home = () => {
         <h2>My Work</h2>
         <div className="portfolio-grid">
           <div className="portfolio-card">
-            <img src="/images/project1.jpg" alt="Project 1" />
-            <h3>Project 1</h3>
-            <p>Short description of project, tech used, and link.</p>
+            <img src="/images/herosection.png" alt="Project 1" />
+            <h3>Codm Blog Website</h3>
+            <p>A modern blogging platform built with React and Node.js, featuring user authentication and CRUD functionality.</p>
           </div>
           <div className="portfolio-card">
-            <img src="/images/project2.jpg" alt="Project 2" />
-            <h3>Project 2</h3>
-            <p>Short description of project, tech used, and link.</p>
+            <img src="/images/helthmark.png" alt="Project 2" />
+            <h3>LiveStock Health care and Marketing Managment System</h3>
+            <p>A livestock healthcare management system built with the MERN stack, designed to streamline animal healthcare and market processes.</p>
           </div>
         </div>
       </section>
